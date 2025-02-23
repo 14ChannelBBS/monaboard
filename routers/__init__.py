@@ -1,3 +1,6 @@
-__all__ = ("index",)
+__all__ = (
+    "index",
+    "boards",
+)
 
-from . import index
+from . import index, boards

@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 import uvicorn
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import ORJSONResponse
 
 from routers import *
 
@@ -15,9 +16,10 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan=lifespan, default_response_class=ORJSONResponse)
 
 app.include_router(index.router)
+app.include_router(boards.router)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
