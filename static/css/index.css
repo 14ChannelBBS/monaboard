@@ -1,0 +1,49 @@
+body {
+  background: #ffffff url("/static/img/thx_14ch_ilust.png") no-repeat center
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.child {
+  padding: 10px;
+  border: solid 0px;
+  border-radius: 10px;
+  background-color: rgba(var(--bs-body-bg-rgb), 0.9);
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn {
+  margin: 2px;
+  background-color: #9943f2;
+  width: 100%;
+  color: #9cf243;
+}
+
+.btn:hover {
+  margin: 2px;
+  background-color: #6610f2;
+  color: #9cf210;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #9cf243;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9943f2;
+}
